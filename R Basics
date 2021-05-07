@@ -5,3 +5,83 @@ R Basics: Vectors, Matrices, Factors, & DataFrames
 ###########
 # Vectors #
 ###########
+
+# 3 different types of vectors #
+
+numeric_vector <- c(1, 2, 3)
+character_vector <- c("a", "b", "c")
+boolean_vector <- c(TRUE, FALSE, TRUE)
+
+# Name your vector #
+
+names_vector <- c("first", "second", "third")
+names(numeric_vector) <- names_vector
+
+# Sum two vectors #
+
+A_vector <- c(1, 2, 3)
+B_vector <- c(4, 5, 6)
+
+total_vector <- A_vector + B_vector
+  
+# Total vector sum #
+
+sum(total_vector)
+sum(A_vector, B_vector)
+
+# Selecting specific elements #
+
+B_vector[c(1,3)]
+numeric_vector[c("first", "third")]
+
+selection_vector <- B_vector > 4
+B_vector[selection_vector]
+
+############
+# Matrices #
+############
+
+# Creating a Basic Matrix #
+
+matrix(1:10, byrow = TRUE, nrow = 2)
+
+# Creating a Matrix from Vectors #
+
+quarter1 <- c(92, 127, 83)
+quarter2 <- c(64, 89, 67)
+quarter3 <- c(73, 64, 84)
+quarter4 <- c(91, 95, 137)
+
+year <- c(quarter1, quarter2, quarter3, quarter4)
+
+year_matrix <- matrix(year, byrow = TRUE, nrow = 4)
+
+# Naming Rows & Columns #
+
+colnames(year_matrix) <- c("First Month", "Second Month", "Third Month")
+rownames(year_matrix) <- c("Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4")
+
+# Row Sum #
+
+total_quarter <- rowSums(year_matrix)
+
+# Adding a new column #
+
+year_matrix <- cbind(year_matrix, total_quarter)
+
+# Column Sum #
+
+month_sum <- colSums(year_matrix)
+
+# Adding a new row #
+
+year_matrix <- rbind(year_matrix, month_sum)
+
+# Slicing #
+
+last_quarter <- year_matrix[4, ]
+
+beginning_first_quarter <- year_matrix[1, 1:2]
+
+# Basic operations #
+
