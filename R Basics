@@ -83,5 +83,6 @@ last_quarter <- year_matrix[4, ]
 
 beginning_first_quarter <- year_matrix[1, 1:2]
 
-# Basic operations #
+# Mean #
 
+mean(last_quarter)
