@@ -6,3 +6,18 @@ Intermediate R Basics
 # Conditionals & Control Flow #
 ###############################
 
+# If Statement Syntax #
+
+if (condition){
+  expr
+}
+
+# If Statement #
+
+sky <- "blue"
+
+if(sky == "blue"){
+  print("the sky is blue!")
+}
+
+# Else Statement #
