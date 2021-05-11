@@ -1,5 +1,5 @@
 ---
-R Basics: Vectors, Matrices, Factors, & DataFrames
+R Basics: Vectors, Matrices, Factors, DataFrames, & Lists
 ---
 
 ###########
@@ -86,3 +86,88 @@ beginning_first_quarter <- year_matrix[1, 1:2]
 # Mean #
 
 mean(last_quarter)
+
+###########
+# Factors #
+###########
+
+# Creating a Factor #
+
+sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+factor_sex_vector <- factor(sex_vector)
+
+# Naming Factor Levels #
+
+levels(factor_sex_vector) <- c("Female", "Male")
+
+# Factor Summary #
+
+summary(factor_sex_vector)
+
+# Ordered Factors #
+
+temperature_vector <- c("cold", "hot", "cold", "medium", "medium", "hot")
+factor_temp_vector <- factor(temperature_vector, ordered = TRUE, levels = c("cold", "medium", "hot"))
+
+##############
+# Dataframes #
+##############
+
+# Creating a Dataframe #
+
+first_name <- c("Sally", "Lincoln", "Beth", "Hugh", "Harry")
+age <- c(18, 26, 32, 53, 41)
+homeowner <- c(FALSE, TRUE, TRUE, FALSE, TRUE)
+
+df <- data.frame(first_name, age, homeowner)
+# First & Last Rows #
+
+head(df)
+tail(df)
+
+# Dataframe Structure #
+
+str(df)
+
+# Additional Slicing #
+
+df[ , "homeowner"]
+df$homeowner
+
+# Subsetting Dataframes #
+
+homeowner_true <- df$homeowner
+df[homeowner_true, ]
+
+subset(df, subset = homeowner)
+
+# Sorting #
+
+order <- order(df$age)
+df[order, ]
+
+#########
+# Lists #
+#########
+
+# Creating a list #
+
+my_vector <- 1:10 
+my_matrix <- matrix(1:9, ncol = 3)
+my_df <- df[1:5,]
+
+my_list <- list(my_vector, my_matrix, my_df)
+
+names(my_list) <- c("vector", "matrix", "dataframe")
+
+# Slicing #
+
+my_list[[1]]
+my_list[["vector"]]
+my_list$vector
+
+my_list[[1]][2]
+
+---
+End of R Basics!
+---
