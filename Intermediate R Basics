@@ -6,9 +6,11 @@ Intermediate R Basics
 # Conditionals & Control Flow #
 ###############################
 
+#######################
 # If Statement Syntax #
+#######################
 
-if (condition){
+if (condition) {
   expr
 }
 
@@ -20,4 +22,83 @@ if(sky == "blue"){
   print("the sky is blue!")
 }
 
+#########################
+# Else Statement Syntax #
+#########################
+
+if (condition) {
+  expr1
+} else {
+  expr2
+}
+
 # Else Statement #
+
+if(sky == "blue"){
+  print("the sky is blue!")
+} else {
+  print("the sky is not blue!")
+}
+
+############################
+# Else if Statement Syntax #
+############################
+
+if (condition) {
+  expr1
+} else if (condition2) {
+  expr2
+} else if (condition3) {
+  expr3
+} else {
+  expr4
+}
+
+# Else if Statement #
+
+number <- 6
+
+if (number < 10) {
+  if (number < 5) {
+    result <- "extra small"
+  } else {
+    result <- "small"
+  }
+} else if (number < 100) {
+  result <- "medium"
+} else {
+  result <- "large"
+}
+print(result)
+
+#####################
+# While loop Syntax #
+#####################
+
+while (condition) {
+  expr
+}
+
+# While loop, Break #
+
+score <- 90
+
+while (score >= 60) {
+  if (score >= 90) {
+    print(paste("Amazing job! Your score is", score))
+    score <- score - 10
+  } else if (score >= 80) {
+    print(paste("Good job! Your score is", score))
+    score <- score - 10
+  } else if (score >= 70) {
+    print(paste("You passed! Your score is", score))
+    score <- score - 10
+  } else {
+    print(paste("Better luck next time. Your score is", score))
+    break
+  }
+}
+
+############
+# For loop #
+############
