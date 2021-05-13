@@ -102,3 +102,62 @@ while (score >= 60) {
 ############
 # For loop #
 ############
+
+for (var1 in seq1) {
+  expr
+}
+
+############
+# For loop #
+############
+
+ages <- c(12, 17, 34, 78, 57, 65, 19, 27, 43)
+
+for (age in ages) {
+  print(age)
+}
+
+for (i in 1:length(ages)) {
+  print(ages[i])
+}
+
+# Break, Next #
+
+for (age in ages) {
+  if (age < 18) {
+    print(paste("You are not an adult. You are", age, "years old."))
+    next
+  }
+  if (age > 65) {
+    print(paste("You are a senior. You are", age, "years old."))
+    break
+  }
+  else {
+    print(paste("You are an adult. You are", age, "years old."))
+  }
+}
+
+##########################
+# Nested For loop Syntax #
+##########################
+
+for (var1 in seq1) {
+  for (var2 in seq2) {
+    expr
+  }
+}
+
+###################
+# Nested For loop #
+###################
+
+num_matrix <- matrix(1:12, nrow = 3, ncol = 4, byrow = TRUE)
+num_matrix
+
+for (i in 1:nrow(num_matrix)) {
+  for (j in 1:ncol(num_matrix)) {
+    print(paste("On row", i, "and column", j, "the matrix contains", num_matrix[i,j]))
+  }
+}
+
+
