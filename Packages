@@ -1,0 +1,6 @@
+###########
+# ggplot2 #
+###########
+
+# Plotting a graph
+qplot(vector1, vector2)
