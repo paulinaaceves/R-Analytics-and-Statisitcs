@@ -160,4 +160,32 @@ for (i in 1:nrow(num_matrix)) {
   }
 }
 
+###################
+# Function Syntax #
+###################
 
+myfunction <- function(positional, keyword = arg2) {
+  body
+  }
+  
+#############
+# Functions #
+#############
+
+exponential <- function(number, power = 2) {
+  final_number <- number ^ power
+  return(paste(number, "to the power of", power, "is", final_number))
+}
+
+#######################
+# Installing Packages #
+#######################
+
+# Installing a Package
+install.packages()
+
+# Loading a Package
+library()
+
+# Searching Packages
+search()
