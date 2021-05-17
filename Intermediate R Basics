@@ -181,11 +181,26 @@ exponential <- function(number, power = 2) {
 # Installing Packages #
 #######################
 
-# Installing a Package
+# Installing a Package #
 install.packages()
 
-# Loading a Package
+# Loading a Package #
 library()
+require()
 
-# Searching Packages
+# Searching Packages #
 search()
+
+##########
+# lapply #
+##########
+
+# Syntax #
+
+lapply(iterable, function, argument = arg1)
+
+# Unlist #
+
+unlist(lapply(iterable, function))
+
+
